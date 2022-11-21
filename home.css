@@ -1,0 +1,129 @@
+h1
+{
+    color: white;
+    font-size:50px;
+    height: 80px;
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+    top: 0%;
+    left:0%;
+    text-align: center;
+}
+h2
+{
+    color: white;
+}
+
+body
+{
+    background-color: black;
+}
+#Players
+{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+   
+}
+#Player2,#Player1
+{
+    display: inline;
+}
+
+.wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px
+  }
+  
+  .ball {
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    margin: 0 10px;
+  
+    animation: 2s bounce ease infinite;
+  }
+  
+  .blue {
+    background-color: #4285F5;
+  }
+  
+  .red {
+    background-color: #EA4436;
+    animation-delay: .25s;
+  }
+  
+  .yellow {
+    background-color: #FBBD06;
+    animation-delay: .5s;
+  }
+  
+  .green {
+    background-color: #34A952;
+    animation-delay: .75s;
+  }
+  
+  @keyframes bounce {  
+      50% {
+          transform: translateY(25px);
+      }
+  }
+
+  button {
+    animation: wiggle 2s linear infinite;
+  }
+  
+  /* Keyframes */
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  
+  body {
+    background: #000;
+  }
+  
+  button {
+    position: absolute;
+    left: calc(50% - 3em);
+    top: calc(50% - 2em);
+    height: 4em;
+    width: 7em;
+    background: #444;
+    background: linear-gradient(top, #555, #333);
+    border: none;
+    border-top: 3px solid orange;
+    border-radius: 0 0 0.2em 0.2em;
+    color: #fff;
+    font-family: Helvetica, Arial, Sans-serif;
+    font-size: 1em;
+    transform-origin: 50% 5em;
+  }
+
+  button:hover
+  {
+    cursor: pointer;
+  }

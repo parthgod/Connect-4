@@ -1,0 +1,129 @@
+body{
+    background-color: #222831;
+    animation: mymove 5s infinite;
+    margin: 0 auto;
+}
+
+@keyframes mymove {
+    0% {background-color:#39CCCC;}
+    50% {background-color: #3D9970;}
+    100% {background-color:#39CCCC;}
+}
+
+h1
+{   
+    left: 0%;
+    top:0%;
+    margin: 0 auto;
+    padding: 0%;
+    background: #3A3845;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.slot-container
+{
+    margin: 0 auto;
+    display: flex;
+    background-color: #C06C84;
+    flex-direction: column;
+    height: 550px;
+    width: 550px;
+    margin-top: 90px;
+    border: 10px solid black;
+    padding: 20px;
+    z-index: 10;
+}
+
+.slot-rows
+{
+    display: flex;
+    margin:0 auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.slots
+{
+    width: 55px;
+    height: 55px;
+    background-color: white;
+    border-radius: 40px;
+    margin: 5px;
+    position: relative;
+    border: 5px solid black;
+}
+
+.coin-fall
+{
+    animation: fall 1s;
+    z-index: 7;
+}
+
+@keyframes fall
+{
+    0%   {transform: translateY(-105px);}
+    100% {transform: translateY(var(--fall)px);}
+}
+
+:root
+{
+    --bg-fill: red;
+}
+
+.slot-anim
+{
+    animation: fall1 8s 1;
+}
+
+@keyframes fall1
+{
+    50% {background-color: var(--bg-fill);}
+}
+
+.coin
+{
+    width: 55px;
+    height: 55px;
+    border-radius: 40px;
+    transform: translateY(-105px);
+}
+
+#win{
+    grid-column: 2/4;
+    grid-row: 2/4;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color:green;
+    align-items: center;
+    font-size: 40px;
+
+}
+#writing{
+    background-color: black;
+    color: white;
+    height: 70px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.show-vict {
+    display: block;
+    position: absolute;
+    opacity: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:black;
+    color: white;
+    font-size:100px;
+    z-index: 1;
+    text-align: center;
+    padding-top: 200px;
+    transition: all 2s ease-in-out;
+}
