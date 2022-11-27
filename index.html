@@ -1,81 +1,39 @@
 <!DOCTYPE html>
-<link rel="stylesheet" type="text/css" href="style.css">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=0.33">
-</head>
-<body>
-    <h1>Connect 4</h1>
-    <div id="writing"></div>
-   
-    <div id="win"></div>
-    <div class="slot-container">
-        <div class="slot-rows">
-            <div class="slots" id="0"></div>
-            <div class="slots" id="1"></div>
-            <div class="slots" id="2"></div>
-            <div class="slots" id="3"></div>
-            <div class="slots" id="4"></div>
-            <div class="slots" id="5"></div>
-            <div class="slots" id="6"></div>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Connect 4</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div id="inner1"><h1>The Connect 4 game</h1></div>
+    <div id="Players">
+        <div>Enter Player 1:
+            <input type="text" id="Player1">
         </div>
-        <div class="slot-rows">
-            <div class="slots" id="7"></div>
-            <div class="slots" id="8"></div>
-            <div class="slots" id="9"></div>
-            <div class="slots" id="10"></div>
-            <div class="slots" id="11"></div>
-            <div class="slots" id="12"></div>
-            <div class="slots" id="13"></div>
+        <br>
+        <div>Enter Player 2: 
+            <input type="text" id="Player2">
         </div>
-        <div class="slot-rows">
-            <div class="slots" id="14"></div>
-            <div class="slots" id="15"></div>
-            <div class="slots" id="16"></div>
-            <div class="slots" id="17"></div>
-            <div class="slots" id="18"></div>
-            <div class="slots" id="19"></div>
-            <div class="slots" id="20"></div>
-        </div>
-        <div class="slot-rows">
-            <div class="slots" id="21"></div>
-            <div class="slots" id="22"></div>
-            <div class="slots" id="23"></div>
-            <div class="slots" id="24"></div>
-            <div class="slots" id="25"></div>
-            <div class="slots" id="26"></div>
-            <div class="slots" id="27"></div>
-        </div>
-        <div class="slot-rows">
-            <div class="slots" id="28"></div>
-            <div class="slots" id="29"></div>
-            <div class="slots" id="30"></div>
-            <div class="slots" id="31"></div>
-            <div class="slots" id="32"></div>
-            <div class="slots" id="33"></div>
-            <div class="slots" id="34"></div>
-        </div>
-        <div class="slot-rows">
-            <div class="slots" id="35"></div>
-            <div class="slots" id="36"></div>
-            <div class="slots" id="37"></div>
-            <div class="slots" id="38"></div>
-            <div class="slots" id="39"></div>
-            <div class="slots" id="40"></div>
-            <div class="slots" id="41"></div>
-        </div>
-        <div class="slot-rows">
-            <div class="slots" id="42"></div>
-            <div class="slots" id="43"></div>
-            <div class="slots" id="44"></div>
-            <div class="slots" id="45"></div>
-            <div class="slots" id="46"></div>
-            <div class="slots" id="47"></div>
-            <div class="slots" id="48"></div>
-        </div>
-    </div>
-    
-    <script src="stack.js" charset="utf-8"></script>
-    <script src="connect4.js" charset="utf-8"></script>
-    <script src="queue.js" charset="utf-8"></script>
 
+    </div>
+    <div class="level">
+        <button id="small" class="btn">Small grid</button>
+        <button id="med" class="btn">Medium grid</button>
+        <button id="large" class="btn">Large grid</button>
+    </div>
+
+    <a href="home.html" ><button type="button" class="play">Play</button></a>
+    
+    <div class="wrapper">
+        <div class="blue ball"></div>
+        <div class="red ball"></div>
+        <div class="yellow ball"></div>
+        <div class="green ball"></div>  
+    </div>
+
+    <script src="app.js"></script>
 </body>
+</html>

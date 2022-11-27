@@ -12,6 +12,6 @@ class stack
         return 0;
         this.stacktop++;
         this.color=color;
-        slots[(i%7)+42-7*this.stacktop].style.backgroundColor=color;
+        slots[(i%size)+(maxgrid-size)-size*this.stacktop].style.backgroundColor=color;
     }
 }

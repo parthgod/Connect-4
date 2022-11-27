@@ -1,129 +1,176 @@
-body{
-    background-color: #222831;
-    animation: mymove 5s infinite;
-    margin: 0 auto;
-}
-
-@keyframes mymove {
-    0% {background-color:#39CCCC;}
-    50% {background-color: #3D9970;}
-    100% {background-color:#39CCCC;}
-}
-
 h1
-{   
-    left: 0%;
-    top:0%;
-    margin: 0 auto;
-    padding: 0%;
-    background: #3A3845;
-    font-size: 60px;
+{
     color: white;
+    font-size:50px;
+    height: 80px;
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+    top: 0%;
+    left:0%;
     text-align: center;
-    text-decoration: none;
-    font-family:'Times New Roman', Times, serif;
+    
 }
-
-.slot-container
+h2
 {
-    margin: 0 auto;
-    display: flex;
-    background-color: #C06C84;
-    flex-direction: column;
-    height: 550px;
-    width: 550px;
-    margin-top: 90px;
-    border: 10px solid black;
-    padding: 20px;
-    z-index: 10;
+    color: white;
 }
 
-.slot-rows
+body
 {
-    display: flex;
-    margin:0 auto;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.slots
-{
-    width: 55px;
-    height: 55px;
-    background-color: white;
-    border-radius: 40px;
-    margin: 5px;
-    position: relative;
-    border: 5px solid black;
-}
-
-.coin-fall
-{
-    animation: fall 1s;
-    z-index: 7;
-}
-
-@keyframes fall
-{
-    0%   {transform: translateY(-105px);}
-    100% {transform: translateY(var(--fall)px);}
-}
-
-:root
-{
-    --bg-fill: red;
-}
-
-.slot-anim
-{
-    animation: fall1 8s 1;
-}
-
-@keyframes fall1
-{
-    50% {background-color: var(--bg-fill);}
-}
-
-.coin
-{
-    width: 55px;
-    height: 55px;
-    border-radius: 40px;
-    transform: translateY(-105px);
-}
-
-#win{
-    grid-column: 2/4;
-    grid-row: 2/4;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color:green;
-    align-items: center;
-    font-size: 40px;
-
-}
-#writing{
     background-color: black;
+}
+#Players
+{
     color: white;
-    height: 70px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 50px;
     text-align: center;
-    text-transform: uppercase;
+    font-size: 30px;
+   
+}
+#Player2,#Player1
+{
+    display: inline;
 }
 
-.show-vict {
-    display: block;
+.wrapper
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+  
+  .ball {
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    margin: 0 10px;
+  
+    animation: 2s bounce ease infinite;
+  }
+  
+  .blue {
+    background-color: #4285F5;
+  }
+  
+  .red {
+    background-color: #EA4436;
+    animation-delay: .25s;
+  }
+  
+  .yellow {
+    background-color: #FBBD06;
+    animation-delay: .5s;
+  }
+  
+  .green {
+    background-color: #34A952;
+    animation-delay: .75s;
+  }
+  
+  @keyframes bounce {  
+      50% {
+          transform: translateY(25px);
+      }
+  }
+
+  .play {
+    animation: wiggle 2s linear infinite;
+  }
+  
+  /* Keyframes */
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  
+  body {
+    background: #000;
+  }
+  
+  .play {
     position: absolute;
-    opacity: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color:black;
-    color: white;
-    font-size:100px;
-    z-index: 1;
-    text-align: center;
-    padding-top: 200px;
-    transition: all 2s ease-in-out;
-}
+    left: calc(50% - 3em);
+    top: calc(50% - 2em);
+    height: 4em;
+    width: 7em;
+    background: #444;
+    background: linear-gradient(top, #555, #333);
+    border: none;
+    border-top: 3px solid orange;
+    border-radius: 0 0 0.2em 0.2em;
+    color: #fff;
+    font-family: Helvetica, Arial, Sans-serif;
+    font-size: 1em;
+    transform-origin: 50% 5em;
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+
+  .play:hover
+  {
+    cursor: pointer;
+  }
+
+  .btn {
+    background: #0d0e0f;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+  }
+  
+  .btn:hover
+  {
+    background: #26e61c;
+    text-decoration: none;
+  }
+
+  .level
+  {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #small,#medium,#large
+  {
+    margin: 20px;
+  }
+
+  .buttonclicked
+  {
+    border: 2px solid white;
+    background: #26e61c;
+  }
+
+  .buttonnotclicked
+  {
+    border: 0px solid white;
+    background-image: linear-gradient(to bottom, #0d0e0f, #0d0e0f);
+  }

@@ -1,36 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Connect 4</title>
-        <link rel="stylesheet" href="home.css">
-        <meta name="viewport" content="width=device-width, initial-scale=2.0">
-    </head>
-    <body>
-    <div id="inner1"><h1>The Connect 4 game</h1></div>
-    <div id="Players">
-        <form>
-        <div>Enter Player 1:
-            <input type="text" id="Player1" required>
-        </div>
-        <br>
-        <div>Enter Player 2: 
-            <input type="text" id="Player2" required>
-        </div>
-    
-    </div>
-    <a href="index.html" ><button class="btn" type="button">Play</button></a>
-    <br><br><br><br><br>
-    <div class="wrapper">
-        <div class="blue ball"></div>
-        <div class="red ball"></div>  
-        <div class="yellow ball"></div>  
-        <div class="green ball"></div>  
-      </div>
-    
+<link rel="stylesheet" type="text/css" href="home.css">
 
-    <script src = "app.js"></script>
+<body>
+    <h1>Connect 4</h1>
+    <div id="writing"></div>
+   
+    <div id="win"></div>
+    <div class="slot-container"></div>
+    
+    <script src="stack.js" charset="utf-8"></script>
+    <script src="connect4.js" charset="utf-8"></script>
+    <script src="queue.js" charset="utf-8"></script>
+
 </body>
-</html>
