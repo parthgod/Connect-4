@@ -241,10 +241,17 @@ slots.forEach((slots,i)=>
             }
             if((c1+c2)>=3)
             {
+                console.log(c1+" "+c2+" "+val+" "+diff);
+                winner=1;
                 if(color==="red")
                 color="yellow";
                 else
                 color="red";
+                let v=val;
+                while(c1--)
+                v-=diff;
+                for(let k=v,l=0;l<4;k+=diff,l++)
+                document.getElementById(k).style.borderColor="white";
                 setTimeout(()=>
                 {
                     if(color=="red")
@@ -269,7 +276,7 @@ slots.forEach((slots,i)=>
                         text.classList.remove("show-vict");
                         see.parentNode.removeChild(see);
                     })
-                },600);
+                },2000);
                 return;
             }
         }
@@ -294,10 +301,17 @@ slots.forEach((slots,i)=>
     })
     slots.addEventListener("mousemove",()=>
     {
+        if(winner==1)
+        {
+            document.getElementById(i%size).innerHTML='';
+            return;
+        }
         document.getElementById(i%size).innerHTML=`<div class="coin" style="background-color:${color}"></div>`;
     })
     slots.addEventListener("click",()=>
     {   
+        if(winner==1)
+        return;
         document.getElementById(i%size).innerHTML=`<div class="coin" style="background-color:${color}"></div>`;
         
         if(color=="red")

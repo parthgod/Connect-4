@@ -65,26 +65,19 @@ h1
     border: 5px solid black ;
 }
 
-.coin-fall
-{
-    animation: fall 1s;
-    z-index: 7;
-}
-
-@keyframes fall
-{
-    0%   {transform: translateY(-105px);}
-    100% {transform: translateY(var(--fall)px);}
-}
-
 .slot-anim
 {
-    animation: fall1 8s 1;
+    animation: flick 2s infinite;
 }
 
-@keyframes fall1
+@keyframes flick
 {
-    50% {background-color: var(--bg-fill);}
+    0% {border-color: white;}
+    20% {border-color: black;}
+    40% {border-color: white;}
+    60% {border-color: black;}
+    80% {border-color: white;}
+    100% {border-color: black;}
 }
 
 .coin
