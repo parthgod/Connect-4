@@ -1,4 +1,4 @@
-const btn = document.querySelector('.btn');
+const btn = document.querySelector('.play');
 const write = document.querySelector('.writing');
 let p1='Player 1',p2='Player 2';
 
